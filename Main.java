@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        int giftValue = 25000;
+        int giftValue = 25001;
 
 
         if (giftValue > 5000 && giftValue <= 25000) {

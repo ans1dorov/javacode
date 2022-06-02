@@ -1,6 +1,6 @@
 public class Password {
     public static void main(String[] args) {
-        String password = "Caput Draconis1";
+        String password = "Caput Draconis2";
         String truepassword = "Caput Draconis";
 
         if (password.equals(truepassword)) {
