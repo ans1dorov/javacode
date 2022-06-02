@@ -1,12 +1,12 @@
 public class Password {
     public static void main(String[] args) {
-        String password = "Caput Draconis";
+        String password = "Caput Draconis2";
+        String truepassword = "Caput Draconis";
 
- if(password =="Caput Draconis"){
-     System.out.println("Welcome");
- }
- else {
-     System.out.println("access denied");
- }
+        if (password.equals(truepassword)) {
+            System.out.println("Welcome");
+        } else {
+            System.out.println("Access denied");
+        }
     }
 }
