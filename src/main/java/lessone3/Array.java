@@ -1,3 +1,5 @@
+package lessone3;
+
 import java.util.Arrays;
 
 public class Array {

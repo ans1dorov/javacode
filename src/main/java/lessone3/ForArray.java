@@ -1,3 +1,5 @@
+package lessone3;
+
 public class ForArray {
     public static void main(String[] args) {
         int[] array = new int[5];
