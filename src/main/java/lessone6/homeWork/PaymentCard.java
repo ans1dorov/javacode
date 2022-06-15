@@ -13,51 +13,42 @@ package lessone6.homeWork;
 //В main методе протестировать методы PaymentsCard.
 
 public class PaymentCard {
-    double balance;
+    private double balance;
 
     public PaymentCard(double balance) {
         this.balance = balance;
     }
 
     public String toString() {
-        return "The card has a balance of " + balance;
+        return "The card has a balance of " + balance + " RUB";
     }
 
-    public double eatAffordably() {
+    void eatAffordably() {
         if (balance - 2.6 > 0) {
-            double result = balance - 2.6;
-            return result;
-        } else {
-            return this.balance;
+            balance -= 2.6;
         }
     }
 
-    public double eatHertily() {
+    void eatHertily() {
         if (balance - 4.6 > 0) {
-            double result = balance - 4.6;
-            return result;
-        } else {
-            return this.balance;
+            balance -= 4.6;
         }
     }
 
-    public double addMoney(double amount) {
-        if (amount < 0) {
-            return balance;
-        } else {
-
-            return this.balance += amount;
+    void addMoney(double amount) {
+        if (amount > 0) {
+            balance = balance + amount;
         }
     }
 
     public static void main(String[] args) {
-        PaymentCard balance = new PaymentCard(10.6);
-
-
-        System.out.println(balance);
-        System.out.println(balance.eatAffordably());
-        System.out.println(balance.eatHertily());
-        System.out.println(balance.addMoney(100));
+        PaymentCard balance = new PaymentCard(2.6);
+        balance.eatAffordably();
+        System.out.println(balance.toString());
+        balance.addMoney(300);
+        System.out.println(balance.toString());
+        balance.eatHertily();
+        System.out.println(balance.toString());
 
 
     }

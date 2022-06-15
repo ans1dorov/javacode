@@ -5,26 +5,26 @@ package lessone6.homeWork;
 //Создать метод void sound() в классе Whistle, который печатает звук из поля sound.
 
 public class Whistle {
-    String sound;
+    private String sound;
 
     public Whistle(String whistleSound) {
-        this.sound = whistleSound;
+        sound = whistleSound;
 
 
     }
 
-
-    public String toString() {
-        return sound;
-    }
 
 
     public static void main(String[] args) {
-        Whistle sound1 = new Whistle("beep");
-        Whistle sound2 = new Whistle("mooo");
-        System.out.println(sound1.sound);
-        System.out.println(sound2.sound);
+        Whistle whistle1 = new Whistle("beep");
+        Whistle whistle2 = new Whistle("mooo");
+        whistle1.sound();
+        whistle2.sound();
 
     }
+    void sound(){
+        System.out.println(sound);
+    }
+
 
 }
