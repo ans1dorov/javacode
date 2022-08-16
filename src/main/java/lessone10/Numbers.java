@@ -17,7 +17,9 @@ import java.util.ListIterator;
 
 public class Numbers {
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+        System.out.println("average(numbers) = " + average(numbers));
+        printInRange(numbers, 1, 12);
     }
 
     private static double average(List<Integer> numbers) {
@@ -27,9 +29,10 @@ public class Numbers {
         }
         return (double) total / numbers.size();
     }
-    private static void printInRange(List<Integer> numbers, int lowerLimit, int upperLimit){
-        for (Integer number:numbers){
-            if (number>=lowerLimit && number<=upperLimit){
+
+    private static void printInRange(List<Integer> numbers, int lowerLimit, int upperLimit) {
+        for (Integer number : numbers) {
+            if (number >= lowerLimit && number <= upperLimit) {
                 System.out.println(number);
             }
         }
