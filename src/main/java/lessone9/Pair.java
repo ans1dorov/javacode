@@ -1,4 +1,4 @@
-package lessone9;
+package by.it_academy.lesson9;
 
 /**
  * Создать интерфейс Pair<L,R> c двумя generic параметрами. Интерфейс содержит два метода:
@@ -11,13 +11,21 @@ package lessone9;
  * @author Maxim Tereshchenko
  */
 interface Pair<L, R> {
+
     L left();
 
     R right();
-
 }
 
-class ComparablePair<T extends ComparablePair<T>> {
+class StringPair extends ComparablePair<String> {
+
+    StringPair(String left, String right) {
+        super(left, right);
+    }
+}
+
+class ComparablePair<T extends Comparable<T>> implements Pair<T, T> {
+
     private final T left;
     private final T right;
 
@@ -26,30 +34,17 @@ class ComparablePair<T extends ComparablePair<T>> {
         this.right = right;
     }
 
+    @Override
     public T left() {
         return left;
     }
 
+    @Override
     public T right() {
         return right;
     }
 
-
     boolean isLeftGreaterThanRight() {
-        return left.compareTo(right);
+        return left.compareTo(right) > 0;
     }
-
-    private boolean compareTo(T right) {
-    }
-
 }
-
-class StringPair extends ComparablePair<String> {
-    StringPair(String left, String right){
-        super(left, right);
-    }
-
-
-}
-
-
